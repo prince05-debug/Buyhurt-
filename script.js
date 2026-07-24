@@ -178,4 +178,12 @@ function toggleTab(type) {
 window.onclick = function(event) {
     if (event.target == authModal) closeAuthModal();
 }
+document.getElementById("sellForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Product Successfully Published on BuyHurt!");
+});
 
+document.getElementById("resellForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Resell Product Successfully Listed on BuyHurt!");
+});
