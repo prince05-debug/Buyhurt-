@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuyHurt | Modern E-commerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo" onclick="showSection('home')">Easy<span>Buy</span></h1>
+            
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search products...">
+                <button onclick="handleSearch()"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="nav-actions">
+                <button id="themeToggle"><i class="fas fa-moon"></i></button>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cartCount">0</span>
+                </div>
+                <button class="btn-auth" onclick="openAuthModal()">Login</button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="mainContent">
+        <!-- Hero Section -->
+        <section id="home" class="view-section">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Upgrade Your Lifestyle</h1>
+                    <p>Discover the latest trends in tech and fashion with EasyBuy.</p>
+                    <button class="btn-primary" onclick="scrollToProducts()">Shop Now</button>
+                </div>
+            </div>
+            
+            <div class="section-title">
+                <h2>Featured Products</h2>
+            </div>
+            <div class="product-grid" id="productGrid">
+                <!-- Products injected by JS -->
+            </div>
+        </section>
+
+        <!-- Product Detail Section -->
+        <section id="productDetail" class="view-section hidden">
+            <button class="btn-back" onclick="showSection('home')"><i class="fas fa-arrow-left"></i> Back to Shop</button>
+            <div class="detail-container" id="detailContainer">
+                <!-- Details injected by JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Shopping Cart Sidebar -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button onclick="toggleCart()">&times;</button>
+        </div>
+        <div id="cartItems" class="cart-items">
+            <!-- Cart items injected by JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="total">Total: $<span id="cartTotal">0.00</span></div>
+            <button class="btn-checkout" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Auth Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAuthModal()">&times;</span>
+            <div class="tabs">
+                <button class="tab-btn active" onclick="toggleTab('login')">Login</button>
+                <button class="tab-btn" onclick="toggleTab('signup')">Sign Up</button>
+            </div>
+            <form id="loginForm">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn-primary">Login</button>
+                </form>
+            <form id="signupForm" class="auth-form hidden">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn-primary">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 BuyHurt. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
