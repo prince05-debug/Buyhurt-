@@ -47,7 +47,20 @@
                 <!-- Products injected by JS -->
             </div>
         </section>
+       <section id="resell" class="view-section hidden">
+    <h2>Resell on BuyHurt</h2>
 
+    <form id="resellForm" class="auth-form">
+        <input type="text" placeholder="Product Name" required>
+        <input type="number" placeholder="Selling Price" required>
+        <input type="url" placeholder="Product Image URL">
+        <textarea placeholder="Describe Product Condition"></textarea>
+
+        <button type="submit" class="btn-primary">
+            List for Resell
+        </button>
+    </form>
+</section>
         <!-- Product Detail Section -->
         <section id="productDetail" class="view-section hidden">
             <button class="btn-back" onclick="showSection('home')"><i class="fas fa-arrow-left"></i> Back to Shop</button>
