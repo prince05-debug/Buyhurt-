@@ -224,10 +224,9 @@ function addSellerProduct() {
         localStorage.setItem("buyhurtProducts", JSON.stringify(products));
 
         renderProducts(products);
+        showSection("home");
 
         alert("Product Added Successfully");
-
-        showSection("home");
     };
 
     reader.readAsDataURL(file);
