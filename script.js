@@ -227,3 +227,11 @@ function addSellerProduct() {
 
     reader.readAsDataURL(file);
 }
+const savedProducts = localStorage.getItem("buyhurtProducts");
+
+if (savedProducts) {
+    products.length = 0;
+    products.push(...JSON.parse(savedProducts));
+}
+
+renderProducts(products);
