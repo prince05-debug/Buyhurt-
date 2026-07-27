@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,6 +72,29 @@
         <section id="sellerDashboard" class="view-section hidden">
     <h2>Seller Dashboard</h2>
     ...
+            <section id="sellerDashboard" class="view-section hidden">
+
+<h2>Seller Dashboard</h2>
+
+<div class="seller-form">
+
+<input type="text" id="sellerName" placeholder="Product Name">
+
+<input type="number" id="sellerPrice" placeholder="Price">
+
+<input type="text" id="sellerCategory" placeholder="Category">
+
+<input type="file" id="sellerImage" accept="image/*">
+
+<textarea id="sellerDesc" placeholder="Product Description"></textarea>
+
+<button class="btn-primary" onclick="addSellerProduct()">
+Add Product
+</button>
+
+</div>
+
+            </section>
         </section>
         <!-- Product Detail Section -->
         <section id="productDetail" class="view-section hidden">
