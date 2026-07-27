@@ -70,7 +70,6 @@
 </section>
         <section id="sellerDashboard" class="view-section hidden">
     <h2>Seller Dashboard</h2>
-    ...
 
 <div class="seller-form">
 
@@ -137,6 +136,18 @@ Add Product
                 <section id="sell" class="view-section hidden">
     <h2>Sell on BuyHurt</h2>
 
+    <form id="signupForm" class="auth-form hidden">
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email" required>
+    <input type="password" placeholder="Password" required>
+    <button type="submit" class="btn-primary">
+        Create Account
+    </button>
+</form>
+
+<section id="sell" class="view-section hidden">
+    <h2>Sell on BuyHurt</h2>
+
     <form id="sellForm" class="auth-form">
         <input type="text" placeholder="Product Name" required>
         <input type="number" placeholder="Price" required>
@@ -148,10 +159,7 @@ Add Product
             Publish Product
         </button>
     </form>
-                </section>
-            </form>
-        </div>
-    </div>
+</section>
 
     <footer class="footer">
         <p>&copy; 2026 BuyHurt. All rights reserved.</p>
