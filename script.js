@@ -178,15 +178,20 @@ function toggleTab(type) {
 window.onclick = function(event) {
     if (event.target == authModal) closeAuthModal();
 }
-document.getElementById("sellForm").addEventListener("submit", function(e){
+const sellForm  =
+document.getElementById("resellForm");
+if (sellForm) {
+  sellForm.addEventListener("submit", function(e){
     e.preventDefault();
     alert("Product Successfully Published on BuyHurt!");
 });
-
-document.getElementById("resellForm").addEventListener("submit", function(e){
-    e.preventDefault();
-    alert("Resell Product Successfully Listed on BuyHurt!");
-});
+    const resellForm = document.getElementById("resellForm");
+if (resellForm) {
+    resellForm.addEventListener("submit", function(e){
+        e.preventDefault();
+        alert("Resell Product Successfully Listed on BuyHurt!");
+    });
+}
 function addSellerProduct() {
 
     const name = document.getElementById("sellerName").value;
