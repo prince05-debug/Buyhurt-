@@ -187,3 +187,43 @@ document.getElementById("resellForm").addEventListener("submit", function(e){
     e.preventDefault();
     alert("Resell Product Successfully Listed on BuyHurt!");
 });
+function addSellerProduct() {
+
+    const name = document.getElementById("sellerName").value;
+    const price = parseFloat(document.getElementById("sellerPrice").value);
+    const category = document.getElementById("sellerCategory").value;
+    const desc = document.getElementById("sellerDesc").value;
+
+    const file = document.getElementById("sellerImage").files[0];
+
+    if (!name || !price || !category || !desc || !file) {
+        alert("Please fill all fields");
+        return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+
+        const newProduct = {
+            id: Date.now(),
+            name,
+            price,
+            category,
+            desc,
+            image: e.target.result
+        };
+
+        products.push(newProduct);
+
+        localStorage.setItem("buyhurtProducts", JSON.stringify(products));
+
+        renderProducts(products);
+
+        alert("Product Added Successfully");
+
+        showSection("home");
+    };
+
+    reader.readAsDataURL(file);
+}
