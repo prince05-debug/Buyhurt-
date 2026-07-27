@@ -389,3 +389,33 @@ body {
 .auth-form textarea{
     min-height:120px;
 }
+.seller-form{
+    max-width:700px;
+    margin:30px auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.seller-form input,
+.seller-form textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.seller-form textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+.seller-form .btn-primary{
+    width:100%;
+    padding:12px;
+}
